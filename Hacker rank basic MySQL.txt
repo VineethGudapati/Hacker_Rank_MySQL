@@ -1,0 +1,62 @@
+1. Revising the Select Query I:
+select * from city where population > 100000 and countrycode = "USA";
+
+2. Revising the Select Query II:
+select name from city where population>120000 and countrycode="USA";
+
+3. Select All:
+select * from city;
+
+4. Select By ID:
+select * from city where id=1661
+;
+5. Japanese Cities' Attributes:
+select * from city where countrycode="JPN";
+
+6. Japanese Cities' Names:
+select name from city where countrycode="JPN";
+
+7. Weather Observation Station 1:
+select city, state from station;
+
+8. Weather Observation Station 3:
+select distinct city from station where id%2=0;
+
+9. Weather Observation Station 4:
+select count(city) - count(distinct city) from station;
+
+10. Weather Observation Station 6:
+select distinct(city) from station where city like 'a%' or city like 'e%' or city like 'i%' or city like 'o%' 
+or city like 'u%';
+
+11. Weather Observation Station 7:
+select distinct(city) from station where city like '%a' or city like '%e' or city like '%i' or city like '%o' 
+or city like '%u';
+
+12. Weather Observation Station 8:
+select distinct city from station where (city like 'a%' or city like 'e%' or city like 'i%' or city like 'o%' or city like 'u%') and (city like '%a' or city like '%e' or city like '%i' or city like '%o' or city like '%u');
+
+13. Weather Observation Station 9:
+select distinct city from station where (city not like 'a%' and city not like 'e%' and city not like 'i%' and city not like 'o%' and city not like 'u%');
+
+14. Weather Observation Station 10:
+select distinct city from station where (city not like '%a' and city not like '%e' and city not like '%i' and city not like '%o' and city not like '%u');
+
+15. Weather Observation Station 11:
+select distinct city from station where (city not like 'a%' and city not like 'e%' and city not like 'i%' and city not like 'o%' and city not like 'u%') or (city not like '%a' and city not like '%e' and city not like '%i' and city not like '%o' and city not like '%u');
+
+16. Weather Observation Station 12:
+select distinct city from station where (city not like 'a%' and city not like 'e%' and city not like 'i%' and city not like 'o%' and city not like 'u%') and (city not like '%a' and city not like '%e' and city not like '%i' and city not like '%o' and city not like '%u');
+
+17. Higher Than 75 Marks:
+select name from students where marks > 75 order by substr(name, length(name)-2,3), ID;
+
+18. Employee Names:
+select name from employee order by name;
+
+19. Employee Salaries:
+select name from employee where salary > 2000 and months < 10;
+
+
+
+
